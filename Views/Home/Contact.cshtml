@@ -1,0 +1,65 @@
+﻿@model Email
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<!-- The code is a Razor view file for a contact page in a web application-->
+<!-- It includes a form where users can submit their name, email, subject, and message-->
+<!--  There's also a map showing the organization's location and a section to display success and error messages if there are any-->
+<head>
+    <link rel="stylesheet" href="~/css/index.css" />
+</head>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<body>
+    <div class="contact-container">
+        <h3>
+            Find Us Here
+        </h3>
+        <div class="map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.4587209651977!2d26.210263874858224!3d-29.12165738910006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8fc568448cf235%3A0xd30b9b175ff584fd!2sCentral%20University%20of%20Technology%2C%20Free%20State!5e0!3m2!1sen!2sza!4v1712695170987!5m2!1sen!2sza" 
+            width="600" height="450" style="border:0;" allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="col-md-6" id="contact-form">
+            <h3>
+                Leave Us A Message
+            </h3>
+            <form asp-action="Contact" asp-controller="Home" method="post" class="contact-form">
+
+                <div class="form-group" id="form-group">
+                    <label asp-for="Subject" class="control-label"></label>
+                    <input asp-for="Subject" class="form-control" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+
+                <div class="form-group" id="form-group">
+                    <label asp-for="Body" class="control-label"></label>
+                    <input asp-for="Body" class="form-control" />
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group" id="form-group">
+                    <input type="submit" value="Send" class="btn btn-primary" />
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</body>

@@ -1,0 +1,225 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /*margin-bottom: 30px;*/
+}
+
+/*
+    Color : #F1D302
+    Background-color: #235789
+    Footer styles
+
+*/
+.footer {
+    background-color: #235789;
+    padding-top: 20px;
+}
+
+.row- {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+}
+
+.footer-col{
+    width: 30%;
+    padding: 0 15px;
+}
+
+.footer-col > ul {
+    list-style-type: none;
+}
+
+.footer-col h4{ 
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-left:27px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #F1D302;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+}
+
+.footer-col ul li a:hover{
+    color: #ED1717;
+    padding-left: 10px;
+}
+
+
+.footer-col .socials a {
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   margin: 0 10px 10px 0;
+   text-align: center;
+   line-height: 40px;
+   border-radius: 50px;
+   background-color: #F1D302;
+}
+
+
+.socials a:hover{
+    color: #ED1717;
+}
+
+.socials-heading {
+    padding: 0 !important;
+}
+
+/* Header Styling 
+    Background color: #235789
+    Foregrund color: #F1D302
+    hover color: #ED1717;
+*/
+
+header {
+    background-color: #235789;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 30px; /* Puts space to the left of the element */
+    padding: 20px 0;
+}
+
+nav .navbar-bran {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav a {
+    color: #F1D302;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;   
+}
+
+.conditionals {
+    color: #F1D302;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ED1717;
+}
+
+/* Courasel */
+
+/* Customize carousel colors and spacing */
+.carousel-item img {
+    /* Apply styling to carousel images */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    /* Apply styling to carousel controls */
+}
+
+
+/* About Us Styling */
+
+.about-main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images fill the container */
+}
+.carousel {
+    width: 80% !important; /* Make the carousel container take up half the width */
+    margin: auto; /* Center the carousel */
+}
+.text-box {
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+}
+
+container-carousel {
+    background-color: #235789;
+}
+.card {
+    margin-right: 4%;
+}
+
+/* Contact Styling */
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.map {
+    width: 85%;
+    margin: 15px auto;
+    paddding: 100px 0;
+}
+
+.map > iframe { 
+    width: 100%;
+}
+
+#contact-form h3 {
+   margin: 15px 0 !important;
+}
+
+#form-group {
+    margin-bottom: 10px;
+}
+.message-container {
+    margin-bottom: 20px;
+}
+
+.alert {
+    width: 100%;
+}
+
+.alert ul {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.alert li {
+    list-style-type: none;
+}

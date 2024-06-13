@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<style>
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar-nav a{
+            color: #F1D302;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+    }
+    .btn-unique{
+        padding: 5px !important;
+        margin: 0 !important;
+        color: #F1D302 !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        position: relative;
+        top: -5px;
+    }
+</style>
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="">
+        <a id="manage" class="" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+    </li>
+    <li class="">
+        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="" type="submit" class="btn btn-unique">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="">
+        <a class="" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="">
+        <a class="" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>
