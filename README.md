@@ -50,8 +50,8 @@ Clone the Repository
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/moookamedicodegeek/ASPNETCore-Student-Enrollment-Web-solution.git
+cd ASPNETCore-Student-Enrollment-Web-solution
 Configure the Database
 
 Update your connection string in appsettings.json.
